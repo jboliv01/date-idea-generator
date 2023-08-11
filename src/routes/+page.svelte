@@ -8,6 +8,9 @@
 	import RecommendationCard from '$lib/RecommendationCard.svelte';
 	import { onMount } from 'svelte';
 	import LoadingCard from '$lib/LoadingCard.svelte';
+	import Weather from '../lib/Weather.svelte';
+	import Venues from '../lib/Venues.svelte';
+
 	let loading = false;
 	let error = '';
 	let endStream = false;
@@ -121,7 +124,7 @@
 </script>
 
 <div>
-	<div class="h-screen w-full bg-cover fixed" style="background-image: url(/background.png)">
+	<div class="h-screen w-full bg-cover fixed">
 		<div
 			class={`${
 				makeRecommendation ? 'backdrop-blur-md' : ''
@@ -150,13 +153,10 @@
 		{:else}
 			<div in:fade class="w-full max-w-4xl mx-auto">
 				<div class="w-full mb-8">
-					<Form
-						bind:cinemaType
-						bind:selectedCategories
-						bind:loading
-						bind:specificDescriptors
-						on:click={search}
-					/>
+					<Weather />
+					<Venues />
+					<Form />
+
 					{#if recommendations.length > 0 && endStream}
 						<button
 							on:click={clearForm}

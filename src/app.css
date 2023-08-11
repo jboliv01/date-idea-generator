@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+    background-color: #000; /* Black background */
+    color: #fff; /* White text */
+  }
+  
+  /* You can also define custom colors in your tailwind.config.js if needed */
+  
