@@ -153,8 +153,12 @@
 		{:else}
 			<div in:fade class="w-full max-w-4xl mx-auto">
 				<div class="w-full mb-8">
-					<Weather />
-					<Venues />
+					<div class="mb-8">
+						<Weather />
+					  </div>
+					  <div>
+						<Venues />
+					  </div>
 					<Form />
 
 					{#if recommendations.length > 0 && endStream}
