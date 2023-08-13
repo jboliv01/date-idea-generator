@@ -40,14 +40,14 @@
 <div class="flex justify-center">
     <div class="w-full max-w-screen-lg">
       <div class="w-full text-center mb-4">
-        <input type="text" bind:value={searchQuery} placeholder="Search venues..." class="p-2 bg-transparent text-center border rounded w-full" />
+        <input type="text" bind:value={searchQuery} placeholder="Search Restaurants & Bars..." class="p-2 bg-transparent text-center border rounded w-full" />
       </div>
       <div class="flex flex-wrap justify-between">
         <div class="w-2/3">
-          <div class="max-h-60 overflow-hidden">
+          <div class="max-h-60 overflow-scroll">
             <ul class="w-full">
               {#each filteredVenues as venue}
-                <li class="w-full rounded-lg p-4 text-primary-600 hover:bg-slate-400 cursor-pointer" on:click={() => selectVenue(venue)}>
+                <li data-te-ripple-init class="w-full rounded-lg p-4 text-primary-600 hover:bg-slate-700 cursor-pointer" on:click={() => selectVenue(venue)}>
                   <span class="text-primary-600">{venue.name}</span>
                   <p class="text-sm text-gray-600">{venue.vicinity}</p>
                 </li>
