@@ -8,7 +8,7 @@
   const excludeParts = 'minutely,hourly'; // Exclude parts as needed
 
   onMount(async () => {
-    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude=${excludeParts}&appid=fb99faff2d807685e30a40a75c228e1a`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&exclude=${excludeParts}&appid=`;
     const response = await fetch(url);
     weather = await response.json();
   });

@@ -10,6 +10,7 @@
 	import LoadingCard from '$lib/LoadingCard.svelte';
 	import Weather from '../lib/Weather.svelte';
 	import Venues from '../lib/Venues.svelte';
+	import GooglePlaces from '$lib/GooglePlaces.svelte';
 
 	let loading = false;
 	let error = '';
@@ -154,6 +155,7 @@
 			<div in:fade class="w-full max-w-4xl mx-auto">
 				<div class="w-full mb-8">
 					<div class="mb-8">
+						<GooglePlaces />
 						<Weather />
 					  </div>
 					  <div>

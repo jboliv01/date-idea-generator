@@ -1,6 +1,7 @@
 <script>
     import { onMount } from 'svelte';
-  
+    import GooglePlaces from './GooglePlaces.svelte';
+    
     let venues = [];
     let selectedVenues = [];
     let searchQuery = '';
@@ -36,6 +37,8 @@
     $: filteredVenues = venues.filter((venue) => venue.name.toLowerCase().includes(searchQuery.toLowerCase()));
     $: isSelected = (venue) => selectedVenues.includes(venue);
 </script>
+
+<GooglePlaces />
 
 <div class="flex justify-center">
     <div class="w-full max-w-screen-lg">
