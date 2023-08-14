@@ -7,5 +7,15 @@ body {
     color: #fff; /* White text */
   }
   
+/* app.css */
+.font-caprasimo {
+  font-family: 'Caprasimo', normal;
+}
+
+.font-berkshire-swash {
+  font-family: 'Berkshire Swash', normal;
+  color: slategray;
+}
+
   /* You can also define custom colors in your tailwind.config.js if needed */
   

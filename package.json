@@ -32,6 +32,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@googlemaps/js-api-loader": "^1.16.2",
 		"@sveltejs/adapter-vercel": "^1.0.6",
 		"@vercel/analytics": "^0.1.8",
 		"@vercel/kv": "^0.2.2",
